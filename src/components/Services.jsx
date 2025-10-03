@@ -153,12 +153,12 @@ function Services() {
                       <span key={idx} className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full font-medium">{f}</span>
                     ))}
                   </div>
-                  <button
-                    onClick={() => navigate(`/services/${service.id}`)}
-                    className="w-full py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
-                  >
-                    Learn More
-                  </button>
+                 <button
+  onClick={() => navigate(`/services/${service.id}`)}
+  className="w-full py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+>
+  Learn More
+</button>
                 </div>
               </div>
             );
