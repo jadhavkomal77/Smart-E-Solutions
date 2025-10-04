@@ -116,7 +116,7 @@ function Enquiry() {
     if (submitted) {
       const timer = setTimeout(() => {
         navigate("/");
-      }, 3000);
+      }, 5000);
       return () => clearTimeout(timer);
     }
   }, [submitted, navigate]);
@@ -133,7 +133,6 @@ function Enquiry() {
               onClick={() => navigate(-1)}
               className="text-blue-600 hover:text-blue-800 font-semibold flex items-center space-x-2"
             >
-              <span>&larr;</span>
               <span>Back</span>
             </button>
           </div>

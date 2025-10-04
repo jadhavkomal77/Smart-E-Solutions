@@ -123,7 +123,7 @@ function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 outline-none transition-all"
-                  placeholder="John Doe"
+                  placeholder="Enter Your Name"
                 />
               </div>
 
@@ -139,7 +139,7 @@ function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 outline-none transition-all"
-                    placeholder="john@example.com"
+                    placeholder="Enter Your Email"
                   />
                 </div>
 
@@ -154,7 +154,7 @@ function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 outline-none transition-all"
-                    placeholder="+91 98765 43210"
+                    placeholder="Enter Your mobile"
                   />
                 </div>
               </div>
@@ -191,7 +191,7 @@ function Contact() {
                   required
                   rows="4"
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 outline-none transition-all resize-none"
-                  placeholder="Tell us about your requirements..."
+                  placeholder="Enter Your Message"
                 ></textarea>
               </div>
 
