@@ -1,10 +1,28 @@
+
+
 import { useState } from 'react';
 import { Camera, Lock, Printer, Projector, HardDrive, Wifi, ChevronRight } from 'lucide-react';
-import { useNavigate } from "react-router-dom";   // 👈 हे import कर
+import { useNavigate } from "react-router-dom";  
+import IPCCTVCamera from "/src/assets/IP CCTV Camera.jpeg"; 
+import PTZSecurityCamera from "/src/assets/PTZ Security Camera.jpeg"; 
+import BiometricDoorLock from "/src/assets/Biometric Door Lock.jpeg"; 
+import SmartKeypadLock from "/src/assets/Smart Keypad Lock.jpg"; 
+import PrinterMultifunction from "/src/assets/Laser Printer Multi-function.jpeg"; 
+import InkjetPhotoPrinter from "/src/assets/inkjet-printer.jpg"; 
+import FullHDProjector from "/src/assets/Full HD Projector.jpeg"; 
+import PortableMiniProjector from "/src/assets/Portable Mini Projector.jpeg"; 
+import NetworkVideoRecorder from "/src/assets/Network Video Recorder.jpeg"; 
+import EnterpriseRouter from "/src/assets/Enterprise Router.jepg.jpeg"; 
+import SmartBulbRGB from "/src/assets/Smart Bulb RGB.jpeg"; 
+import ConferenceMicrophone from "/src/assets/Conference Microphone.jpg"; 
+import WirelessMouse from "/src/assets/Wireless Mousejpeg.jpeg"; 
+import SmartWiFiPlug from "/src/assets/Smart WiFi Plug.jpeg"; 
+import MechanicalKeyboard from "/src/assets/Mechanical Keyboard.jpeg"; 
+
 
 function Products() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const navigate = useNavigate();   // 👈 hook वापर
+  const navigate = useNavigate();  
 
   const handleEnquiry = (productName) => {
     navigate(`/enquiry?product=${encodeURIComponent(productName)}`);
@@ -20,97 +38,134 @@ function Products() {
     { id: 'network', name: 'Networking', icon: Wifi },
   ];
 
-    const products = [
-    {
-      category: "cctv",
-      name: "IP CCTV Camera 4MP",
-      description:
-        "High-definition IP camera with night vision, motion detection, and remote viewing capabilities.",
-      price: "From ₹4,500",
-      features: ["4MP Resolution", "Night Vision", "Weatherproof", "Mobile App"],
-      image: "bg-gradient-to-br from-blue-600 to-blue-800",
-    },
-    {
-      category: "cctv",
-      name: "PTZ Security Camera",
-      description:
-        "Pan-tilt-zoom camera with 360° coverage, auto-tracking, and smart detection features.",
-      price: "From ₹12,000",
-      features: ["360° Coverage", "Auto Tracking", "HD Quality", "Cloud Storage"],
-      image: "bg-gradient-to-br from-gray-700 to-gray-900",
-    },
-    {
-      category: "locks",
-      name: "Biometric Door Lock",
-      description:
-        "Advanced fingerprint lock with multiple access modes and remote control via smartphone.",
-      price: "From ₹8,500",
-      features: ["Fingerprint", "PIN Code", "RFID Card", "App Control"],
-      image: "bg-gradient-to-br from-blue-700 to-blue-900",
-    },
-    {
-      category: "locks",
-      name: "Smart Keypad Lock",
-      description:
-        "Keyless entry system with customizable PIN codes and temporary access for guests.",
-      price: "From ₹5,500",
-      features: ["PIN Access", "Auto Lock", "Low Battery Alert", "Weather Resistant"],
-      image: "bg-gradient-to-br from-gray-800 to-black",
-    },
-    {
-      category: "printers",
-      name: "Laser Printer Multi-function",
-      description:
-        "High-speed laser printer with print, scan, and copy functions for office use.",
-      price: "From ₹15,000",
-      features: ["Fast Printing", "Wireless", "Auto Duplex", "Cloud Print"],
-      image: "bg-gradient-to-br from-blue-600 to-blue-800",
-    },
-    {
-      category: "printers",
-      name: "Inkjet Photo Printer",
-      description:
-        "Professional photo printer with vibrant color output and high-resolution printing.",
-      price: "From ₹8,000",
-      features: ["Photo Quality", "Borderless", "CD/DVD Print", "Compact Design"],
-      image: "bg-gradient-to-br from-gray-700 to-gray-900",
-    },
-    {
-      category: "projectors",
-      name: "Full HD Projector",
-      description:
-        "Bright 1080p projector perfect for presentations, movies, and gaming experiences.",
-      price: "From ₹25,000",
-      features: ["Full HD", "High Brightness", "HDMI/USB", "Long Lamp Life"],
-      image: "bg-gradient-to-br from-blue-700 to-blue-900",
-    },
-    {
-      category: "projectors",
-      name: "Portable Mini Projector",
-      description:
-        "Compact projector with wireless connectivity, perfect for on-the-go presentations.",
-      price: "From ₹12,000",
-      features: ["Portable", "Wireless", "Built-in Battery", "Smart OS"],
-      image: "bg-gradient-to-br from-gray-800 to-black",
-    },
-    {
-      category: "storage",
-      name: "Network Video Recorder",
-      description:
-        "16-channel NVR with 4TB storage for recording and managing multiple cameras.",
-      price: "From ₹18,000",
-      features: ["16 Channels", "4TB Storage", "Remote Access", "Backup"],
-      image: "bg-gradient-to-br from-blue-600 to-blue-800",
-    },
-    {
-      category: "network",
-      name: "Enterprise Router",
-      description:
-        "High-performance router with advanced security and seamless connectivity for businesses.",
-      price: "From ₹6,500",
-      features: ["Dual Band", "High Speed", "VPN Support", "QoS"],
-      image: "bg-gradient-to-br from-gray-700 to-gray-900",
-    },
+  const products = [
+
+  {
+    category: "cctv",
+    name: "IP CCTV Camera 4MP",
+    description: "High-definition IP camera with night vision, motion detection, and remote viewing.",
+    price: "From ₹4,500",
+    features: ["4MP Resolution", "Night Vision", "Weatherproof", "Mobile App"],
+    image: IPCCTVCamera,
+  },
+  {
+    category: "cctv",
+    name: "PTZ Security Camera",
+    description: "Pan-Tilt-Zoom camera with 360° coverage and 30x optical zoom.",
+    price: "From ₹12,000",
+    features: ["360° View", "30x Optical Zoom", "AI Motion Tracking"],
+    image: PTZSecurityCamera,
+  },
+
+  {
+    category: "locks",
+    name: "Biometric Door Lock",
+    description: "Fingerprint smart lock with keypad and mobile app unlock.",
+    price: "From ₹8,000",
+    features: ["Fingerprint Unlock", "Mobile App", "PIN Code", "Auto Lock"],
+    image: BiometricDoorLock,
+  },
+  {
+    category: "locks",
+    name: "Smart Keypad Lock",
+    description: "Keyless entry lock with multiple access methods.",
+    price: "From ₹5,500",
+    features: ["PIN Unlock", "RFID Access", "Emergency Key"],
+    image: SmartKeypadLock,
+  },
+
+  {
+    category: "printers",
+    name: "Multifunction Laser Printer",
+    description: "High-speed printer with scan, copy, and wireless connectivity.",
+    price: "From ₹15,000",
+    features: ["Print/Scan/Copy", "WiFi", "Duplex Printing"],
+    image: PrinterMultifunction,
+  },
+  {
+    category: "printers",
+    name: "Inkjet Photo Printer",
+    description: "Best for high-quality photo prints at home or office.",
+    price: "From ₹9,500",
+    features: ["Photo Printing", "Borderless Prints", "Wireless"],
+    image: InkjetPhotoPrinter,
+  },
+
+  {
+    category: "projectors",
+    name: "Full HD Projector",
+    description: "1920x1080 resolution projector with HDMI & USB support.",
+    price: "From ₹18,000",
+    features: ["1080p", "HDMI Input", "Remote Control"],
+    image: FullHDProjector,
+  },
+  {
+    category: "projectors",
+    name: "Portable Mini Projector",
+    description: "Compact projector with wireless screen mirroring.",
+    price: "From ₹7,000",
+    features: ["WiFi", "Compact", "HD Ready"],
+    image: PortableMiniProjector,
+  },
+  {
+    category: "networking",
+    name: "Network Video Recorder (NVR)",
+    description: "Professional NVR for CCTV systems with 16 channels.",
+    price: "From ₹22,000",
+    features: ["16 Channels", "4K Support", "Remote Access"],
+    image: NetworkVideoRecorder,
+  },
+  {
+    category: "networking",
+    name: "Enterprise Router",
+    description: "High-performance router for offices and enterprises.",
+    price: "From ₹10,500",
+    features: ["Gigabit Ports", "Firewall", "VPN Support"],
+    image: EnterpriseRouter,
+  },
+
+  {
+    category: "accessories",
+    name: "Wireless Mouse",
+    description: "Ergonomic wireless mouse with long battery life.",
+    price: "From ₹750",
+    features: ["2.4GHz", "Ergonomic Design", "Rechargeable"],
+    image: WirelessMouse,
+  },
+  {
+    category: "accessories",
+    name: "Mechanical Keyboard",
+    description: "RGB backlit keyboard with blue switches.",
+    price: "From ₹3,200",
+    features: ["RGB Lighting", "Durable Keys", "USB-C"],
+    image: MechanicalKeyboard,
+  },
+
+  {
+    category: "smart-devices",
+    name: "Smart WiFi Plug",
+    description: "Voice-controlled smart plug with Alexa & Google support.",
+    price: "From ₹1,200",
+    features: ["WiFi", "Voice Control", "Energy Monitoring"],
+    image: SmartWiFiPlug,
+  },
+  {
+    category: "smart-devices",
+    name: "Smart Bulb RGB",
+    description: "16M color smart bulb with remote control via app.",
+    price: "From ₹900",
+    features: ["RGB Colors", "Dimmable", "WiFi Control"],
+    image: SmartBulbRGB,
+  },
+{
+  category: "audio-video",
+  name: "Conference Microphone",
+  description: "USB plug-and-play microphone for meetings, podcasts, and recording.",
+  price: "From ₹4,000",
+  features: ["Omnidirectional", "USB Powered", "Plug & Play"],
+  image: ConferenceMicrophone,
+}
+
   ];
 
   const filteredProducts = selectedCategory === 'all'
@@ -165,13 +220,14 @@ function Products() {
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
             >
               {/* Product Image Section */}
-              <div className={`h-48 ${product.image} flex items-center justify-center relative overflow-hidden`}>
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
-                <div className="relative text-white text-center p-6">
-                  <div className="text-4xl font-bold mb-2">{product.name.split(' ')[0]}</div>
-                  <div className="text-sm opacity-90">Premium Quality</div>
-                </div>
-              </div>
+             <div className="h-60 relative overflow-hidden flex items-center justify-center bg-white">
+  <img
+    src={product.image}
+    alt={product.name}
+    className="max-h-full max-w-full object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+/>
+</div>
+
 
               {/* Product Details */}
               <div className="p-6">
